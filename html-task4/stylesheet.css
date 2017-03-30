@@ -1,0 +1,73 @@
+/*重置样式从这里开始*/
+body,div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,input,form,a,p,textarea{
+    margin:0;
+    padding:0;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+ol,ul,li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    display: block;
+    /* color:white;*/
+}
+
+img{
+    border:none;
+    display: block;
+}
+
+.clearfloat{
+    zoom: 1;
+}
+
+.clearfloat:after{
+    display:block;
+    clear:both;
+    content: "";
+    visibility: hidden;
+    height:0;
+}
+
+/*重置样式从这里结束*/
+
+.section {
+    position: relative;
+    width: 100%;
+    height:100%;
+}
+
+.box {
+    position: absolute;
+    left:50%;
+    margin-left:-200px;
+    top:50%;
+    margin-top:-100px;
+    width: 400px;
+    height:200px;
+    background: #ccc;
+    overflow: hidden;
+}
+
+.round1 {
+    width: 100px;
+    height:100px;
+    border-radius: 50%;
+    background: #fc0;
+    position: absolute;
+    left:-12.5%;
+    top:-25%;
+}
+
+.round2 {
+    width: 100px;
+    height:100px;
+    border-radius: 50%;
+    background: #fc0;
+    position: absolute;
+    right:-12.5%;
+    bottom:-25%;
+}
