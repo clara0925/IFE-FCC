@@ -2,42 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!--引入手机适应的meta-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--引入bootstrap-->
-    <link href="links/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link href="task-8.css" rel="stylesheet" >
+
     <title>任务八：响应式网格（栅格化）布局</title>
-    <style>
-        .my-box {
-            height: 50px;
-            margin-top: 20px;
-            background-color: #eee;
-            border: 1px solid #999;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-xs-4"><div class="my-box"></div></div>
-            <div class="col-xs-4"><div class="my-box"></div></div>
-            <div class="col-xs-4"><div class="my-box"></div></div>
+            <div class="col-1 col-style"></div>
+            <div class="col-1 col-style"></div>
+            <div class="col-2 col-style"></div>
         </div>
         <div class="row">
-            <div class="col-xs-3"><div class="my-box"></div></div>
-            <div class="col-xs-6"><div class="my-box"></div></div>
-            <div class="col-xs-3"><div class="my-box"></div></div>
+            <div class="col-3 col-style"></div>
+            <div class="col-4 col-style"></div>
+            <div class="col-3 col-style"></div>
         </div>
         <div class="row">
-            <div class="col-xs-1"><div class="my-box"></div></div>
-            <div class="col-xs-1"><div class="my-box"></div></div>
-            <div class="col-xs-2"><div class="my-box"></div></div>
-            <div class="col-xs-2"><div class="my-box"></div></div>
-            <div class="col-xs-6"><div class="my-box"></div></div>
+            <div class="col-5 col-style"></div>
+            <div class="col-5 col-style"></div>
+            <div class="col-6 col-style"></div>
+            <div class="col-7 col-style"></div>
+            <div class="col-8 col-style"></div>
         </div>
     </div>
-
-    <script src="links/jquery-3.2.0.min.js"></script>
-    <script src="links/bootstrap.min.js"></script>
 </body>
 </html>

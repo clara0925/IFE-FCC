@@ -1,0 +1,121 @@
+.container {
+    margin: 20px;
+    padding: 10px;
+    width: 100%;
+    /*border: 1px solid #999;*/
+    clear: both;
+    overflow: hidden;
+}
+
+.col-style {
+    margin: 10px;
+    height:50px;
+    background-color: #eee;
+    border: 1px solid #999;
+    box-sizing: border-box;
+}
+
+@media screen and ( min-width: 768px) {
+
+    .col-1 {
+        width: 30%;
+        float: left;
+        clear: right;
+    }
+    /*4*/
+    .col-2 {
+        width: 30%;
+        float: left;
+        clear: right;
+    }
+    /*4*/
+    .col-3 {
+        width: 22.5%;
+        float: left;
+        clear: right;
+    }
+    /*3*/
+    .col-4 {
+        width: 45%;
+        float: left;
+        clear: right;
+    }
+
+    .col-5 {
+        width: 7.2%;
+        float: left;
+        clear: right;
+    }
+
+    .col-6 {
+        width: 14%;
+        float: left;
+        clear: right;
+    }
+
+    .col-7 {
+        width: 14%;
+        float: left;
+        clear: right;
+    }
+
+    .col-8 {
+        width: 45%;
+        float: left;
+        clear: right;
+    }
+
+}
+
+@media screen and ( max-width: 768px) {
+
+    .col-1 {
+        width: 46.5%;
+        float: left;
+        clear: right;
+    }
+
+    .col-2 {
+        width: 96%;
+        float: left;
+        clear: right;
+    }
+
+    .col-3 {
+        width: 22.5%;
+        float: left;
+        clear: right;
+    }
+
+    .col-4 {
+        width: 45%;
+        float: left;
+        clear: right;
+    }
+
+    .col-5 {
+        width: 15%;
+        float: left;
+        clear: right;
+    }
+
+    .col-6 {
+        width: 60%;
+        float: left;
+        clear: right;
+    }
+
+    .col-7 {
+        width: 22.5%;
+        float: left;
+        clear: right;
+    }
+
+    .col-8 {
+        width: 22.5%;
+        float: left;
+        clear: right;
+    }
+
+
+}
