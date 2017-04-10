@@ -14,10 +14,15 @@ body {
 @media screen and (max-width: 640px) {
     .flex-container {
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
         -webkit-align-items: flex-start;
         -webkit-flex-direction: row;
-        -webkit-flex-wrap: wrap-reverse;
+        -webkit-flex-wrap: wrap;
+
+    }
+
+    .box4 {
+        -webkit-order: -1;
     }
 }
 
