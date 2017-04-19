@@ -1,0 +1,134 @@
+/*重置样式从这里开始*/
+body,div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,input,form,a,p,textarea{
+    margin:0;
+    padding:0;
+    font-family: "Adobe Fan Heiti Std B","Microsoft YaHei",Arial,sans-serif;
+}
+
+a{
+    text-decoration: none;
+    display: block;
+    /* color:white;*/
+}
+
+img{
+    border:none;
+    /*display: block;*/
+}
+
+.clearfloat{
+    zoom: 1;
+}
+
+.clearfloat:after{
+    display:block;
+    clear:both;
+    content: "";
+    visibility: hidden;
+    height:0;
+}
+
+/*重置样式从这里结束*/
+
+html { font-size: 20px; }
+body {
+    background-color: #f6f6f6;}
+/*导航栏*/
+
+.top-head-bar {
+    height: 2.25rem;
+    width: 100%;
+    background-color: #67C7C7;
+}
+
+.top-head-bar h4 {
+    color: #fff;
+    text-align: center;
+    line-height: 2.25rem;
+    font-weight: 400;
+}
+
+nav {
+    /*position: fixed;*/
+    /*z-index: 100;*/
+
+    height: 2rem;
+    width: 100%;
+    background-color: #fff;
+}
+
+nav ul {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-around;
+
+    text-align: center;
+}
+
+nav li {
+    width: 2.8rem;
+    line-height: 2rem;
+    list-style: none;
+}
+
+nav li a {
+    font-size: 18px;
+    color: #2f2f38;
+    font-weight: 500;
+}
+
+nav li:first-child {
+    box-sizing: border-box;
+    border-bottom: 3px solid #67C7C7;
+
+}
+
+.top-banner img{
+    margin-top: 3px;
+    height: 10.8rem;
+    width: 100%;
+}
+
+.top-tags {
+    height: 14.1rem;
+    width: 100%;
+    background-color: #fff;
+}
+
+.top-tags>ul {
+    width: 90%;
+    height: 5.8rem;
+    margin-left: 5%;
+    text-align: center;
+    display: -webkit-flex;
+    justify-content: space-around;
+    align-items: center;
+
+    border-bottom: 1px solid #e3e3e3;
+
+}
+
+.top-tags li {
+    list-style: none;
+}
+
+.top-tags img {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    background-color: #67C7C7;
+}
+
+.top-tags p {
+    font-size: 15px;
+    color: #2f2f38;
+    padding-top: .5rem;
+}
+
+.top-tags-col {
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-around;
+}
