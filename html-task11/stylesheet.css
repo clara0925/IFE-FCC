@@ -52,7 +52,7 @@ nav {
     /*position: fixed;*/
     /*z-index: 100;*/
 
-    height: 2rem;
+    height: 40px;
     width: 100%;
     background-color: #fff;
 }
@@ -69,12 +69,12 @@ nav ul {
 
 nav li {
     width: 2.8rem;
-    line-height: 2rem;
+    line-height: 1.85rem;
     list-style: none;
 }
 
 nav li a {
-    font-size: 18px;
+    font-size: 16px;
     color: #2f2f38;
     font-weight: 500;
 }
@@ -86,8 +86,6 @@ nav li:first-child {
 }
 
 .top-banner img{
-    margin-top: 3px;
-    height: 10.8rem;
     width: 100%;
 }
 
@@ -95,6 +93,7 @@ nav li:first-child {
     height: 14.1rem;
     width: 100%;
     background-color: #fff;
+    margin-top: -.25rem;
 }
 
 .top-tags>ul {
@@ -112,23 +111,193 @@ nav li:first-child {
 
 .top-tags li {
     list-style: none;
+    text-align: center;
 }
 
-.top-tags img {
-    height: 2.5rem;
-    width: 2.5rem;
-    border-radius: 50%;
-    background-color: #67C7C7;
-}
 
 .top-tags p {
     font-size: 15px;
     color: #2f2f38;
-    padding-top: .5rem;
+    font-weight: 500;
+}
+
+.tags-img:before {
+    content: " ";
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    background-color: #67C7C7;
+    display: block;
+    margin-bottom: .7rem;
 }
 
 .top-tags-col {
     display: -webkit-flex;
     align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    width: 90%;
+    margin-left: 5%;
+    text-align: center;
+}
+
+.top-tags-common {
+    box-sizing: border-box;
+    -webkit-flex-grow: 1;
+}
+
+.top-tags-common>img {
+    height: 4rem;
+    width: 3.5rem;
+}
+
+.top-tags-common>h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2f2f38;
+}
+
+.top-tags-common>p {
+    font-size: 14px;
+}
+
+.top-tags-col1 {
+    border-right: 1px solid #e3e3e3;
+}
+
+.top-tags-col2 {
+    border-right: 1px solid #e3e3e3;
+}
+
+.main-part-one {
+    height: 13rem;
+    width: 100%;
+    background-color: #fff;
+    margin-top: .5rem;
+}
+
+.main-part-one>h3 {
+    font-size: 18px;
+    color: #2f2f38;
+    width: 90%;
+    margin-left: 5%;
+    line-height: 2.2rem;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.part-one-content {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: .3rem;
+    height: 10.1rem;
+    display: -webkit-flex;
+    align-items: center;
     justify-content: space-around;
+    flex-flow: column wrap;
+    -webkit-flex-flow: column wrap;
+
+}
+.part-one-content li {
+    list-style: none;
+    /*margin:.1rem .2rem;*/
+    padding: .2rem;
+}
+
+.part-one-content li>img {
+    height: 4.4rem;
+    width: 4.4rem;
+    margin-left: -.2rem;
+}
+
+
+.part-one-content li>h5 {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #f2f2f2;
+    width: 5.8rem;
+    height: 1.9rem;
+    line-height: 1.9rem;
+    text-align: center;
+}
+
+.articles {
+    height: 17.5rem;
+    background-color: #fff;
+    margin-top: .5rem;
+}
+
+.articles div>img {
+    width: 5.4rem;
+    height: 3.8rem;
+}
+
+.article1 {
+    height: 4.8rem;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e3e3e3;
+
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column wrap;
+    align-items: flex-start;
+}
+
+.article1>img {
+    margin-left: 5%;
+    margin-top: .5rem;
+}
+
+.article1>h4 {
+    width: 10rem;
+    height: 3rem;
+    word-break: break-all;
+
+    font-size: 18px;
+    color: #616174;
+    padding-top: .5rem;
+    line-height: 1.2;
+}
+
+.article1>p {
+    font-size: 13px;
+    color: #6e6e6e;
+}
+
+.article3 {
+    height: 7.5rem;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.article3>h4 {
+    word-break: break-all;
+    font-size: 18px;
+    color: #616174;
+    padding-top: .5rem;
+    line-height: 1.2;
+}
+
+.img-container {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: .5rem;
+}
+
+.article3>p {
+    font-size: 13px;
+    color: #6e6e6e;
+    padding-top: .5rem;
+}
+
+footer {
+    height: 52px;
+    width: 100%;
+    background-color: #f7f7f7;
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    display: block;
 }
