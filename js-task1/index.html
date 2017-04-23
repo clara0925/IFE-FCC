@@ -3,18 +3,46 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>JS Bin</title>
+    <title>任务二：零基础JavaScript编码（二）</title>
 </head>
 <body>
-    <label>请告诉我你的年龄：<input id="yourAge" type="text"></label>
-    <input type="button" value="确认提交" onclick="aA()">
-    <div>你的年龄是：<span id="age-display">还没有告诉我</span></div>
+<!--任务一-->
+    <!--<label>请告诉我你的年龄：<input id="yourAge" type="text"></label>-->
+    <!--<input type="button" value="确认提交" onclick="aA()">-->
+    <!--<div>你的年龄是：<span id="age-display">还没有告诉我</span></div>-->
 
+    <!--<script type="text/javascript">-->
+        <!--function aA() {-->
+            <!--document.getElementById("age-display").innerHTML= document.getElementById("yourAge").value;-->
+        <!--}-->
+
+    <!--</script>-->
+<!--任务二-->
+    <h3>污染城市列表</h3>
+    <ul id="aqi-list">
+        <!--
+            <li>第一名：福州（样例），10</li>
+              <li>第二名：福州（样例），10</li> -->
+    </ul>
     <script type="text/javascript">
-        function aA() {
-            document.getElementById("age-display").innerHTML= document.getElementById("yourAge").value;
-        }
 
-</script>
+        var aqiData = [
+            ["北京", 90],
+            ["上海", 50],
+            ["福州", 10],
+            ["广州", 50],
+            ["成都", 90],
+            ["西安", 100]
+        ];
+      aqiData.sort(function (a,b) {return b>a});//数值大小相反的顺序，因为比较函数只使用一次，所以没有必要可以命名。
+          for(var i=0;i<aqiData.length;i++){ //第一维
+              for(var j=0;j<aqiData[i].length;j++){ //第二维
+                   if(aqiData[i][j] >= 60){
+                      document.write("第"+(i+1)+"名："+aqiData[i]+"<br>");
+                   }
+              }
+          }
+
+    </script>
 </body>
 </html>
