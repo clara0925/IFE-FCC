@@ -34,15 +34,18 @@
             ["成都", 90],
             ["西安", 100]
         ];
-      aqiData.sort(function (a,b) {return b>a});//数值大小相反的顺序，因为比较函数只使用一次，所以没有必要可以命名。
-          for(var i=0;i<aqiData.length;i++){ //第一维
-              for(var j=0;j<aqiData[i].length;j++){ //第二维
-                   if(aqiData[i][j] >= 60){
-                      document.write("第"+(i+1)+"名："+aqiData[i]+"<br>");
-                   }
-              }
-          }
+        (function () {
+            aqiData.sort(function (a,b) {return b>a});//数值大小相反的顺序，因为比较函数只使用一次，所以没有必要可以命名。
+            var myList = document.getElementById('aqi-list')
 
+            for(var i=0;i<aqiData.length;i++){ //遍历数组
+                    if(aqiData[i][1] >= 60){
+                        var listItem = document.createElement('li');
+                        listItem.innerHTML = "第"+(i+1)+"名："+aqiData[i]+"<br>";
+                        myList.appendChild(listItem);
+                    }
+            }
+        })();
     </script>
 </body>
 </html>
