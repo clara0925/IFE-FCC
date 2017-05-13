@@ -29,7 +29,7 @@ function titleCase(str) {
   return arr.join(" ");
 }
 
-titleCase("I'm a little tea pot");
+titleCase("I'm a little tea pot"); // "I'm A Little Tea Pot"
 ```
 [`substr()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substr)
 
@@ -46,7 +46,7 @@ function confirmEnding(str, target) {
   }
 }
 
-confirmEnding("He has to give me a new name", "name");
+confirmEnding("He has to give me a new name", "name"); //true
 ```
 
 * 把一个数组arr按照指定的数组大小size分割成若干个数组块
@@ -60,7 +60,7 @@ function chunk(arr, size) {
     return newArr;  
 }
 
-chunk([0, 1, 2, 3, 4, 5, 6, 7, 8], 4);
+chunk([0, 1, 2, 3, 4, 5, 6, 7, 8], 4); // [[0, 1, 2, 3], [4, 5, 6, 7], [8]]
 ```
 [`slice()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/slice)
  
@@ -84,11 +84,11 @@ function mutation(arr) {
     else { return true;}
 }
 
-mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]);
+mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]); //true
 ```
 [`indexOf()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf#Example:_indexOf_and_case-sensitivity)
  
-*  实现一个摧毁函数，第一个参数是待摧毁的数组，其余的参数是待摧毁的值
+* 实现一个摧毁函数，第一个参数是待摧毁的数组，其余的参数是待摧毁的值
 ```javascript
 function destroyer(arr) {
   var args = arr.slice.call(arguments); //将argument对象转换成真正的数组
@@ -102,7 +102,36 @@ function destroyer(arr) {
   return args[0];
 }
 
-destroyer(["tree", "hamburger", 53], "tree", 53);
+destroyer(["tree", "hamburger", 53], "tree", 53); //["hamburger"]
 ```
 [`arguments`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 
 
+* 写一个ROT13函数，实现输入加密字符串，输出解密字符串。移位密码也就是密码中的字母会按照指定的数量来做移位。
+一个常见的案例就是ROT13密码，字母会移位13个位置。由'A' ↔ 'N', 'B' ↔ 'O'，以此类推。
+```javascript
+function rot13(str) { // LBH QVQ VG!
+  var newNum, a;
+  var newStr = "";
+  var n = 0;
+   
+    while(n < str.length){
+      newNum = str.charCodeAt(n) + 13;
+      if(newNum > 90){
+        newNum = newNum - 26;
+      }
+      a = String.fromCharCode(newNum);
+      
+            if(str.charCodeAt(n) < 65 || str.charCodeAt(n) > 90){
+              a = str[n];
+            }
+      newStr += a;
+      n++;
+    }
+  
+  return newStr;
+}
+
+// Change the inputs below to test
+rot13("GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK."); //"THE QUICK BROWN DOG JUMPED OVER THE LAZY FOX."
+```
+[`charCodeAt()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt) [`String.fromCharCode()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode)fromCharCode()是String()构造函数的一个属性，不能当作对象使用。
