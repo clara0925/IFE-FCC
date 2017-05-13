@@ -87,4 +87,22 @@ function mutation(arr) {
 mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]);
 ```
 [`indexOf()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf#Example:_indexOf_and_case-sensitivity)
+ 
+*  实现一个摧毁函数，第一个参数是待摧毁的数组，其余的参数是待摧毁的值
+```javascript
+function destroyer(arr) {
+  var args = arr.slice.call(arguments); //将argument对象转换成真正的数组
+  var i = 1;
+  var filtered = function(x){ return x != args[i];};
+  
+  while(i < args.length){
+    args[0] = args[0].filter(filtered);
+    i++; 
+  }
+  return args[0];
+}
+
+destroyer(["tree", "hamburger", 53], "tree", 53);
+```
+[`arguments`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 
 
