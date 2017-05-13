@@ -105,11 +105,30 @@ function destroyer(arr) {
 destroyer(["tree", "hamburger", 53], "tree", 53); //["hamburger"]
 ```
 [`arguments`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 
+ 
+* 查看字符串是否是回文
+```javascript
+function palindrome(str) {
+  var a = str.replace(/[^a-zA-Z0-9]/gi,"");
+  var oldStr = str.replace(/[^a-zA-Z0-9]/gi,"");
+  var arr = a.split("");
+  var newStr = arr.reverse().join("");
+ 
+ if (newStr.toLowerCase() == oldStr.toLowerCase()){
+  return true;
+ }
+  else {
+    return false;
+  }
+}
+
+palindrome("race car");// true
+```
 
 * 写一个ROT13函数，实现输入加密字符串，输出解密字符串。移位密码也就是密码中的字母会按照指定的数量来做移位。
 一个常见的案例就是ROT13密码，字母会移位13个位置。由'A' ↔ 'N', 'B' ↔ 'O'，以此类推。
 ```javascript
-function rot13(str) { // LBH QVQ VG!
+function rot13(str) { 
   var newNum, a;
   var newStr = "";
   var n = 0;
@@ -135,3 +154,18 @@ function rot13(str) { // LBH QVQ VG!
 rot13("GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK."); //"THE QUICK BROWN DOG JUMPED OVER THE LAZY FOX."
 ```
 [`charCodeAt()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt) [`String.fromCharCode()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode)fromCharCode()是String()构造函数的一个属性，不能当作对象使用。
+ 
+ * 计算整数的阶乘
+```javascript
+function factorialize(num) {
+  var i = 1;
+  var total = 1;
+  while (i <= num){
+    total *= i;
+    i++;
+  }
+  return total;
+}
+
+factorialize(7); // 5040
+```
